@@ -1,0 +1,23 @@
+.videosidebar {
+  position: absolute;
+  bottom: 20%;
+  right: 20px;
+}
+
+/* .videosidebar__icon {
+  width: 30px;
+  height: 30px;
+} */
+
+.videosidebar__button {
+  filter: invert(1);
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.videosidebar__button > p {
+  font-weight: 700;
+}

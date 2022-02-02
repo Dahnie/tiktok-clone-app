@@ -1,8 +1,10 @@
 import React, { useRef, useState } from 'react';
 import video1 from "../assets/video1.mp4"
 import "./Video.css"
+import Videofooter from './Videofooter';
+import Videosidebar from './Videosidebar';
 
-function Video() {
+function Video({ url }) {
 
     const videoRef = useRef(null);
     const [playing, setPlaying] = useState(false);
@@ -26,8 +28,10 @@ function Video() {
             <video ref={videoRef} onClick={handleVideoClick} className='video__replay' loop src={video1}>
             </video>
             {/* Video sidebar */}
+            <Videosidebar likes={100} shares={153} comments={19} />
             {/* Video footer*/}
-        </div>
+            <Videofooter channel="@anime_god" description="Charon is so strong #fireforce" sound={`animation sound`} />
+        </div >
     );
 }
 

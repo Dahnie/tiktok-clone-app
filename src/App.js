@@ -6,8 +6,9 @@ function App() {
     // BEM naming convention
     <div className="app">
       <div className="app__videos">
-        <Video />
-        <Video />
+        <Video url={``} />
+        <Video url={``} />
+        <Video url={``} />
       </div>
 
     </div>
