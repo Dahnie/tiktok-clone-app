@@ -18,6 +18,7 @@ mongoose.connect(connectionUrl, {
     useNewUrlParser: true,
 })
 
+
 // middlewares
 // Used to parse json
 app.use(express.json())
