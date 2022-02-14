@@ -1,7 +1,23 @@
 // import { ThemeProvider } from "@emotion/react";
-import { createContext, Component } from "react";
+import { createContext, useState, Component } from "react";
 
-const VideoContext = createContext();
+export const VideoContext = createContext();
+
+// const VideoContextProvider = (props) => {
+//     const [url, setUrl] = useState("");
+//     const [isPlaying, setIsPlaying] = useState(false)
+//     const togglePlaying = () => {
+//         setIsPlaying(!isPlaying)
+//     }
+//     return (
+//         <VideoContext.Provider value={{ url, isPlaying, togglePlaying }}>
+//             {props.children}
+//         </VideoContext.Provider>
+//     );
+// }
+
+// export default VideoContextProvider;
+
 class VideoContextProvider extends Component {
     state = {
         videoUrl: "",
@@ -24,7 +40,7 @@ class VideoContextProvider extends Component {
     }
     render() {
         return (
-            <VideoContext.Provider value={{ ...this.state }}>
+            <VideoContext.Provider value={{ ...this.state, togglePlaying: this.togglePlaying, toggleLiked: this.toggleLiked }}>
                 {this.props.children}
             </VideoContext.Provider>
         );

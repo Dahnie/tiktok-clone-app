@@ -11,10 +11,17 @@
 }
 
 .videofooter__text > h3 {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 .videofooter__text > p {
+  width: 80%;
   padding-bottom: 20px;
+  /* background-color: black; */
+}
+
+.videofooter__text > p > span {
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .videofooter__icon {
@@ -50,4 +57,8 @@
   bottom: 0;
   right: 20px;
   filter: invert(1);
+}
+
+.hidden {
+  display: none;
 }
